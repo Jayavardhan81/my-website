@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Science and Machine Learning Career Path</title>
+  <style>
+    body {
+      /* font-family: Arial, sans-serif; */
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+   /* Navbar Styling */
+a {
+    text-decoration: none;
+}
+/* General Navbar Styles */
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 0 20px;
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+    position: relative; /* Ensures proper child positioning */
+    z-index: 10;
+}
+
+/* Title (h1) Styling */
+#nav-bar h1 {
+    color: #06BBCC;
+    font-size: 20px; /* Adjust font size for responsiveness */
+    font-weight: bold;
+    line-height: 60px; /* Vertically center the title */
+    margin: 0; /* Avoid extra spacing */
+}
+
+/* Hamburger Icon Styling */
+#hamburger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#hamburger-icon div {
+    background-color: #06BBCC;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Nav Links Styling */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links .nav-item {
+    font-weight: bold;
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-links .nav-item:hover,
+.nav-links .nav-item.active {
+    color: #06BBCC;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media screen and (max-width: 768px) {
+    #hamburger-icon {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Place below navbar */
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .nav-links .nav-item {
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Ensure Title (h1) is centered */
+    #nav-bar h1 {
+        font-size: 18px; /* Adjust size for mobile */
+        text-align: center;
+        flex-grow: 1;
+    }
+}
+   
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #333;
+      font-size: 24px;
+    }
+    .highlight {
+      background-color: #e0f7fa;
+      padding: 5px;
+      border-radius: 3px;
+    }
+    ul {
+      line-height: 1.8;
+      margin-left: 20px;
+    }
+    .skills-list, .tools-list, .roles-list, .salary-list {
+      margin-top: 20px;
+    }
+    .skills-list li, .tools-list li, .roles-list li, .salary-list li {
+      background-color: #f1f1f1;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+    .skills-list li:hover, .tools-list li:hover, .roles-list li:hover, .salary-list li:hover {
+      background-color: #e1e1e1;
+    }
+    .main-point {
+      font-weight: bold;
+      color: #00796b;
+    }
+    .site-footer {
+      background-color: #071523; /* Blue background */
+      color: #fff; /* White text color */
+      text-align: center; /* Center-align content */
+      padding: 20px 10px; /* Spacing around content */
+      margin-top: 50px; /* Space from main content */
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto; /* Center footer content */
+    }
+
+    .footer-links {
+      margin-bottom: 10px;
+    }
+
+    .footer-link {
+      color: #fff; /* White link color */
+      text-decoration: none;
+      margin: 0 15px; /* Space between links */
+      font-size: 16px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .footer-link:hover {
+      color: #ffd700; /* Gold color on hover */
+    }
+
+    .footer-copyright {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+   <!-- Navbar -->
+   <div id="total">
+    <nav id="nav-bar">
+        <h1>Educational Guide</h1>
+        <!-- Hamburger icon for mobile view -->
+        <div class="hamburger" id="hamburger-icon">
+            &#9776; <!-- Hamburger icon (3 horizontal lines) -->
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html"><div class="nav-item">Home</div></a>
+            <a href="aboutus.html"><div class="nav-item">About Us</div></a>
+            <a href="contact.html"><div class="nav-item">Contact</div></a>
+        </div>
+    </nav>
+</div>
+
+
+  <div class="container">
+    <section>
+      <h2 class="main-point">Overview of Data Science and Machine Learning</h2>
+      <p>Data Science and Machine Learning are transforming industries by enabling organizations to make data-driven decisions. Data scientists analyze complex data sets to extract insights, while machine learning engineers develop algorithms to help systems learn from data. As both fields continue to grow, the demand for professionals with expertise in data analysis, modeling, and machine learning technologies is increasing rapidly.</p>
+    </section>
+
+    <section>
+      <h2 class="main-point">Data Science and Machine Learning Skills</h2>
+      <h3>For Freshers:</h3>
+      <ul class="skills-list">
+        <li>Basic understanding of <span class="highlight">Statistics</span> and probability.</li>
+        <li>Familiarity with <span class="highlight">Data Cleaning</span> and preprocessing techniques.</li>
+        <li>Proficiency in programming languages like <span class="highlight">Python</span> or <span class="highlight">R</span>.</li>
+        <li>Knowledge of <span class="highlight">SQL</span> for data querying.</li>
+        <li>Basic understanding of <span class="highlight">Machine Learning Algorithms</span> (e.g., linear regression, decision trees).</li>
+        <li>Experience with data visualization tools like <span class="highlight">Matplotlib</span> and <span class="highlight">Seaborn</span>.</li>
+      </ul>
+
+      <h3>For Experienced Professionals:</h3>
+      <ul class="skills-list">
+        <li>Proficiency in advanced <span class="highlight">Machine Learning Algorithms</span> (e.g., Random Forest, SVM, Neural Networks).</li>
+        <li>Expertise in <span class="highlight">Deep Learning</span> and frameworks like TensorFlow or PyTorch.</li>
+        <li>Experience with big data technologies like <span class="highlight">Hadoop</span> and <span class="highlight">Spark</span>.</li>
+        <li>Expert in <span class="highlight">Natural Language Processing (NLP)</span> and <span class="highlight">Computer Vision</span>.</li>
+        <li>Ability to design and deploy machine learning models into production.</li>
+        <li>Knowledge of cloud platforms for data science (e.g., <span class="highlight">AWS</span>, <span class="highlight">Azure</span>, <span class="highlight">Google Cloud</span>).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="main-point">Salaries in Data Science and Machine Learning</h2>
+      <h3>For Freshers:</h3>
+      <ul class="salary-list">
+        <li>Data Analyst: 4 LPA - 7 LPA</li>
+        <li>Junior Data Scientist: 5 LPA - 8 LPA</li>
+        <li>Machine Learning Engineer: 6 LPA - 9 LPA</li>
+        <li>Data Engineer: 5 LPA - 8 LPA</li>
+      </ul>
+
+      <h3>For Experienced Professionals:</h3>
+      <ul class="salary-list">
+        <li>Senior Data Scientist: 12 LPA - 20 LPA</li>
+        <li>Machine Learning Engineer: 10 LPA - 18 LPA</li>
+        <li>Data Science Manager: 15 LPA - 30 LPA</li>
+        <li>AI Research Scientist: 18 LPA - 35 LPA</li>
+        <li>Chief Data Officer (CDO): 25 LPA - 50 LPA</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="https://www.youtube.com" target="_blank" class="footer-link">YouTube</a>
+        <a href="https://www.facebook.com" target="_blank" class="footer-link">Facebook</a>
+        <a href="https://www.linkedin.com/in/maradana-jayavardhan-b54ab6329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="footer-link">LinkedIn</a>
+      </div>
+      <p class="footer-copyright">&copy; 2024 Educational Guide. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+<script src="hamburger.js"></script>

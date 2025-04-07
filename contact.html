@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Educational Guide</title>
+  <style>
+    body {
+      /* font-family: Arial, sans-serif; */
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+   /* Navbar Styling */
+a {
+    text-decoration: none;
+}
+/* General Navbar Styles */
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 0 20px;
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+    position: relative; /* Ensures proper child positioning */
+    z-index: 10;
+}
+
+/* Title (h1) Styling */
+#nav-bar h1 {
+    color: #06BBCC;
+    font-size: 20px; /* Adjust font size for responsiveness */
+    font-weight: bold;
+    line-height: 60px; /* Vertically center the title */
+    margin: 0; /* Avoid extra spacing */
+}
+
+/* Hamburger Icon Styling */
+#hamburger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#hamburger-icon div {
+    background-color: #06BBCC;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Nav Links Styling */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links .nav-item {
+    font-weight: bold;
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-links .nav-item:hover,
+.nav-links .nav-item.active {
+    color: #06BBCC;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media screen and (max-width: 768px) {
+    #hamburger-icon {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Place below navbar */
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .nav-links .nav-item {
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Ensure Title (h1) is centered */
+    #nav-bar h1 {
+        font-size: 18px; /* Adjust size for mobile */
+        text-align: center;
+        flex-grow: 1;
+    }
+}
+  
+   
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #333;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    a {
+  text-decoration: none;
+}
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input[type="email"], textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 150px;
+    }
+
+    button {
+      background-color: #0e2527;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #028c8c;
+    }
+
+    #thanks-message {
+      display: none;
+      color: #28a745;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .site-footer {
+      background-color: #071523; /* Blue background */
+      color: #fff; /* White text color */
+      text-align: center; /* Center-align content */
+      padding: 20px 10px; /* Spacing around content */
+      margin-top: 50px; /* Space from main content */
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto; /* Center footer content */
+    }
+
+    .footer-links {
+      margin-bottom: 10px;
+    }
+
+    .footer-link {
+      color: #fff; /* White link color */
+      text-decoration: none;
+      margin: 0 15px; /* Space between links */
+      font-size: 16px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .footer-link:hover {
+      color: #ffd700; /* Gold color on hover */
+    }
+
+    .footer-copyright {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="total">
+      <nav id="nav-bar">
+          <h1>Educational Guide</h1>
+          <!-- Hamburger icon for mobile view -->
+          <div class="hamburger" id="hamburger-icon">
+              &#9776; <!-- Hamburger icon (3 horizontal lines) -->
+          </div>
+          <div class="nav-links" id="nav-links">
+              <a href="index.html"><div class="nav-item">Home</div></a>
+              <a href="aboutus.html"><div class="nav-item">About Us</div></a>
+              <a href="contact.html"><div class="nav-item">Contact</div></a>
+          </div>
+      </nav>
+  </div>
+  
+
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need further information, feel free to reach out to us via email at <strong>educationalguide43@gmail.com</strong>.</p>
+
+    <form id="contact-form" onsubmit="sendEmail(); return false;">
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Thank You message -->
+    <div id="thanks-message">Thanks for your mail!</div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="https://www.youtube.com" target="_blank" class="footer-link">YouTube</a>
+        <a href="https://www.facebook.com" target="_blank" class="footer-link">Facebook</a>
+        <a href="https://www.linkedin.com/in/maradana-jayavardhan-b54ab6329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="footer-link">LinkedIn</a>
+      </div>
+      <p class="footer-copyright">&copy; 2024 Educational Guide. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function sendEmail() {
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+      var subject = "Message from " + email;
+      
+      // Open the user's default email client with pre-filled details
+      window.location.href = "mailto:educationalguide43@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(message);
+      
+      // Show thank you message and clear form
+      document.getElementById("thanks-message").style.display = "block";
+      document.getElementById("contact-form").reset();
+    }
+  </script>
+
+</body>
+</html>
+<script src="hamburger.js"></script>

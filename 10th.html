@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options After 10th</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            /* font-family: Arial, sans-serif; */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #total {
+            width: 100%;
+        }
+
+        /* Navbar Styling */
+a {
+    text-decoration: none;
+}
+/* General Navbar Styles */
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 0 20px;
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+    position: relative; /* Ensures proper child positioning */
+    z-index: 10;
+}
+
+/* Title (h1) Styling */
+#nav-bar h1 {
+    color: #06BBCC;
+    font-size: 20px; /* Adjust font size for responsiveness */
+    font-weight: bold;
+    line-height: 60px; /* Vertically center the title */
+    margin: 0; /* Avoid extra spacing */
+}
+
+/* Hamburger Icon Styling */
+#hamburger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#hamburger-icon div {
+    background-color: #06BBCC;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Nav Links Styling */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links .nav-item {
+    font-weight: bold;
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-links .nav-item:hover,
+.nav-links .nav-item.active {
+    color: #06BBCC;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media screen and (max-width: 768px) {
+    #hamburger-icon {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Place below navbar */
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .nav-links .nav-item {
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Ensure Title (h1) is centered */
+    #nav-bar h1 {
+        font-size: 18px; /* Adjust size for mobile */
+        text-align: center;
+        flex-grow: 1;
+    }
+}
+
+        .site-footer {
+            background-color: #071523;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 10px;
+        }
+
+        .footer-link {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #ffd700;
+        }
+
+        .footer-copyright {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 80px auto;
+        }
+
+        h1 {
+            color: #0f171c;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .option {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #192641;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .option:hover {
+            background-color: #404140;
+        }
+
+        .courses {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .course-item {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="total">
+    <nav id="nav-bar">
+        <h1>Educational Guide</h1>
+        <!-- Hamburger icon for mobile view -->
+        <div class="hamburger" id="hamburger-icon">
+            &#9776; <!-- Hamburger icon (3 horizontal lines) -->
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html"><div class="nav-item">Home</div></a>
+            <a href="aboutus.html"><div class="nav-item">About Us</div></a>
+            <a href="contact.html"><div class="nav-item">Contact</div></a>
+        </div>
+    </nav>
+</div>
+
+
+   <!-- Main Content -->
+   <div class="container">
+    <h1>"Explore Your Future Pathways After 10th"    </h1>
+    
+    <button class="option" onclick="toggleCourses('intermediate')">Intermediate</button>
+    <div id="intermediate" class="courses">
+        <h2>Intermediate Courses (Duration: 2 years)</h2>
+        <div class="course-item">
+            <h3>MPC (Maths, Physics, Chemistry)</h3>
+            <p>Ideal for careers in engineering, architecture, or technical fields.</p>
+            <p><strong>Future Opportunities:</strong> Engineering (B.Tech/B.E), Architecture, Defence Services.</p>
+        </div>
+        <div class="course-item">
+            <h3>BIPC (Biology, Physics, Chemistry)</h3>
+            <p>Perfect for students interested in medicine, pharmacy, and agriculture.</p>
+            <p><strong>Future Opportunities:</strong> MBBS, BDS, Nursing, Biotechnology.</p>
+        </div>
+        <div class="course-item">
+            <h3>CEC (Commerce, Economics, Civics)</h3>
+            <p>Focused on business, management, and finance fields.</p>
+            <p><strong>Future Opportunities:</strong> CA, BBA, Banking, Government Jobs.</p>
+        </div>
+        <div class="course-item">
+            <h3>HEC (History, Economics, Civics)</h3>
+            <p>Suited for students interested in humanities, arts, and social sciences.</p>
+            <p><strong>Future Opportunities:</strong> UPSC, Teaching, Journalism.</p>
+        </div>
+    </div>
+
+    <button class="option" onclick="toggleCourses('diploma')">Diploma</button>
+    <div id="diploma" class="courses">
+        <h2>Diploma Courses (Duration: 3 years)</h2>
+        <div class="course-item">
+            <h3>Civil Engineering</h3>
+            <p>Focuses on the construction and maintenance of structures.</p>
+        </div>
+        <div class="course-item">
+            <h3>Mechanical Engineering</h3>
+            <p>Covers the design and production of machinery and tools.</p>
+        </div>
+        <div class="course-item">
+            <h3>Electrical Engineering</h3>
+            <p>Deals with electrical systems and technologies.</p>
+        </div>
+    </div>
+
+    <button class="option" onclick="toggleCourses('vocational')">Vocational Courses</button>
+    <div id="vocational" class="courses">
+        <h2>Vocational Courses (Duration: 6 months - 2 years)</h2>
+        <div class="course-item">
+            <h3>IT and Computer Science</h3>
+            <p>Learn programming and software tools.</p>
+        </div>
+        <div class="course-item">
+            <h3>Fashion Designing</h3>
+            <p>Explore creative design in the fashion industry.</p>
+        </div>
+        <div class="course-item">
+            <h3>Travel and Tourism</h3>
+            <p>Learn about travel management and hospitality.</p>
+        </div>
+    </div>
+
+    <button class="option" onclick="toggleCourses('iti')">ITI (Industrial Training Institute)</button>
+    <div id="iti" class="courses">
+        <h2>ITI Courses (Duration: 1-2 years)</h2>
+        <div class="course-item">
+            <h3>Electrician</h3>
+            <p>Hands-on training in electrical systems.</p>
+        </div>
+        <div class="course-item">
+            <h3>Plumber</h3>
+            <p>Focuses on plumbing systems and maintenance.</p>
+        </div>
+    </div>
+
+    <button class="option" onclick="toggleCourses('creative')">Creative and Sports Options</button>
+    <div id="creative" class="courses">
+        <h2>Creative and Sports Options</h2>
+        <div class="course-item">
+            <h3>Fine Arts</h3>
+            <p>Training in painting, music, or performing arts.</p>
+        </div>
+        <div class="course-item">
+            <h3>Sports Academies</h3>
+            <p>Professional training in cricket, football, and other sports.</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="https://www.youtube.com" target="_blank" class="footer-link">YouTube</a>
+          <a href="https://www.facebook.com" target="_blank" class="footer-link">Facebook</a>
+          <a href="https://www.linkedin.com/in/maradana-jayavardhan-b54ab6329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="footer-link">LinkedIn</a>
+        </div>
+        <p class="footer-copyright">© 2024 Educational Guide. All Rights Reserved.</p>
+      </div>
+    </footer>
+    
+    <script>
+        function toggleCourses(option) {
+            // Hide all course lists
+            const courses = document.querySelectorAll('.courses');
+            courses.forEach(course => {
+                if (course.id !== option) {
+                    course.style.display = 'none';
+                }
+            });
+
+            // Toggle the visibility of the selected course list
+            const selectedCourse = document.getElementById(option);
+            selectedCourse.style.display = selectedCourse.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+    <script src="hamburger.js"></script>
+</body>
+</html>

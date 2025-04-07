@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Stack Developer Career Path</title>
+  <style>
+    body {
+      /* font-family: Arial, sans-serif; */
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    /* Navbar Styling */
+a {
+    text-decoration: none;
+}
+/* General Navbar Styles */
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 0 20px;
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+    position: relative; /* Ensures proper child positioning */
+    z-index: 10;
+}
+
+/* Title (h1) Styling */
+#nav-bar h1 {
+    color: #06BBCC;
+    font-size: 20px; /* Adjust font size for responsiveness */
+    font-weight: bold;
+    line-height: 60px; /* Vertically center the title */
+    margin: 0; /* Avoid extra spacing */
+}
+
+/* Hamburger Icon Styling */
+#hamburger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#hamburger-icon div {
+    background-color: #06BBCC;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Nav Links Styling */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links .nav-item {
+    font-weight: bold;
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-links .nav-item:hover,
+.nav-links .nav-item.active {
+    color: #06BBCC;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media screen and (max-width: 768px) {
+    #hamburger-icon {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Place below navbar */
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .nav-links .nav-item {
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Ensure Title (h1) is centered */
+    #nav-bar h1 {
+        font-size: 18px; /* Adjust size for mobile */
+        text-align: center;
+        flex-grow: 1;
+    }
+}
+
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #333;
+      font-size: 24px;
+    }
+    .highlight {
+      background-color: #e0f7fa;
+      padding: 5px;
+      border-radius: 3px;
+    }
+    ul {
+      line-height: 1.8;
+      margin-left: 20px;
+    }
+    .skills-list, .tools-list, .roles-list, .salary-list {
+      margin-top: 20px;
+    }
+    .skills-list li, .tools-list li, .roles-list li, .salary-list li {
+      background-color: #f1f1f1;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+    .skills-list li:hover, .tools-list li:hover, .roles-list li:hover, .salary-list li:hover {
+      background-color: #e1e1e1;
+    }
+    .main-point {
+      font-weight: bold;
+      color: #00796b;
+    }
+    .site-footer {
+      background-color: #071523; /* Blue background */
+      color: #fff; /* White text color */
+      text-align: center; /* Center-align content */
+      padding: 20px 10px; /* Spacing around content */
+      margin-top: 50px; /* Space from main content */
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto; /* Center footer content */
+    }
+
+    .footer-links {
+      margin-bottom: 10px;
+    }
+
+    .footer-link {
+      color: #fff; /* White link color */
+      text-decoration: none;
+      margin: 0 15px; /* Space between links */
+      font-size: 16px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .footer-link:hover {
+      color: #ffd700; /* Gold color on hover */
+    }
+
+    .footer-copyright {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="total">
+      <nav id="nav-bar">
+          <h1>Educational Guide</h1>
+          <!-- Hamburger icon for mobile view -->
+          <div class="hamburger" id="hamburger-icon">
+              &#9776; <!-- Hamburger icon (3 horizontal lines) -->
+          </div>
+          <div class="nav-links" id="nav-links">
+              <a href="index.html"><div class="nav-item">Home</div></a>
+              <a href="aboutus.html"><div class="nav-item">About Us</div></a>
+              <a href="contact.html"><div class="nav-item">Contact</div></a>
+          </div>
+      </nav>
+  </div>
+  
+
+  <div class="container">
+    <section>
+      <h2 class="main-point">Overview of Full-Stack Developer</h2>
+      <p>A Full-Stack Developer is a versatile professional skilled in both frontend and backend development. They are responsible for creating complete web applications, managing the user interface, server-side logic, and database interactions. Full-stack developers ensure seamless communication between the frontend and backend, delivering end-to-end solutions.</p>
+    </section>
+
+    <section>
+      <h2 class="main-point">Full-Stack Developer Skills</h2>
+      <h3>For Freshers:</h3>
+      <ul class="skills-list">
+        <li>Basic proficiency in <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, and <span class="highlight">JavaScript</span>.</li>
+        <li>Understanding of <span class="highlight">Frontend Frameworks</span> like React or Angular.</li>
+        <li>Knowledge of <span class="highlight">Backend Technologies</span> such as Node.js or Python (Django/Flask).</li>
+        <li>Basic understanding of <span class="highlight">Databases</span> like MySQL or MongoDB.</li>
+        <li>Familiarity with <span class="highlight">Version Control</span> tools like Git.</li>
+        <li>Knowledge of <span class="highlight">RESTful APIs</span> and basic API integration.</li>
+      </ul>
+
+      <h3>For Experienced Professionals:</h3>
+      <ul class="skills-list">
+        <li>Advanced skills in <span class="highlight">JavaScript Frameworks</span> like Vue.js, Angular, or React.</li>
+        <li>Proficiency in <span class="highlight">Backend Frameworks</span> like Express.js, Spring Boot, or Ruby on Rails.</li>
+        <li>Experience with <span class="highlight">Cloud Platforms</span> (AWS, Azure, Google Cloud).</li>
+        <li>In-depth understanding of <span class="highlight">Microservices Architecture</span> and deployment.</li>
+        <li>Expertise in <span class="highlight">Database Design</span> and optimization.</li>
+        <li>Knowledge of <span class="highlight">DevOps Tools</span> and CI/CD pipelines.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="main-point">Salaries of Full-Stack Developers</h2>
+      <h3>For Freshers:</h3>
+      <ul class="salary-list">
+        <li>Junior Full-Stack Developer: 4 LPA - 7 LPA</li>
+        <li>Web Developer: 4.5 LPA - 8 LPA</li>
+        <li>UI/UX Engineer: 4 LPA - 7 LPA</li>
+        <li>Frontend-Backend Developer: 4.5 LPA - 9 LPA</li>
+      </ul>
+
+      <h3>For Experienced Professionals:</h3>
+      <ul class="salary-list">
+        <li>Senior Full-Stack Developer: 10 LPA - 20 LPA</li>
+        <li>Tech Lead: 15 LPA - 25 LPA</li>
+        <li>Full-Stack Architect: 18 LPA - 30 LPA</li>
+        <li>Solutions Architect: 20 LPA - 35 LPA</li>
+        <li>DevOps-Full-Stack Engineer: 12 LPA - 28 LPA</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="https://www.youtube.com" target="_blank" class="footer-link">YouTube</a>
+        <a href="https://www.facebook.com" target="_blank" class="footer-link">Facebook</a>
+        <a href="https://www.linkedin.com/in/maradana-jayavardhan-b54ab6329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="footer-link">LinkedIn</a>
+      </div>
+      <p class="footer-copyright">&copy; 2024 Educational Guide. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="hamburger.js"></script>

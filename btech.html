@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options After B.Tech</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            /* font-family: Arial, sans-serif; */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #total {
+            width: 100%;
+        }
+/* Navbar Styling */
+a {
+    text-decoration: none;
+}
+/* General Navbar Styles */
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 0 20px;
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+    position: relative; /* Ensures proper child positioning */
+    z-index: 10;
+}
+
+/* Title (h1) Styling */
+#nav-bar h1 {
+    color: #06BBCC;
+    font-size: 20px; /* Adjust font size for responsiveness */
+    font-weight: bold;
+    line-height: 60px; /* Vertically center the title */
+    margin: 0; /* Avoid extra spacing */
+}
+
+/* Hamburger Icon Styling */
+#hamburger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#hamburger-icon div {
+    background-color: #06BBCC;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Nav Links Styling */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links .nav-item {
+    font-weight: bold;
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-links .nav-item:hover,
+.nav-links .nav-item.active {
+    color: #06BBCC;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media screen and (max-width: 768px) {
+    #hamburger-icon {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Place below navbar */
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .nav-links .nav-item {
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Ensure Title (h1) is centered */
+    #nav-bar h1 {
+        font-size: 18px; /* Adjust size for mobile */
+        text-align: center;
+        flex-grow: 1;
+    }
+}
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 80px auto;
+        }
+
+        h1 {
+            color: #0f171c;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .option {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #192641;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .option:hover {
+            background-color:  #404140;
+        }
+
+        .courses {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .course-item {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="total">
+    <nav id="nav-bar">
+        <h1>Educational Guide</h1>
+        <!-- Hamburger icon for mobile view -->
+        <div class="hamburger" id="hamburger-icon">
+            &#9776; <!-- Hamburger icon (3 horizontal lines) -->
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html"><div class="nav-item">Home</div></a>
+            <a href="aboutus.html"><div class="nav-item">About Us</div></a>
+            <a href="contact.html"><div class="nav-item">Contact</div></a>
+        </div>
+    </nav>
+</div>
+
+   <!-- Main Content -->
+   <div class="container">
+    <h1>"Explore Your Future Pathways After Engineering"</h1>
+    
+    <button class="option" onclick="toggleCourses('cse')">Computer Science Engineering (CSE)</button>
+    <div id="cse" class="courses">
+        <h2>Computer Science Engineering</h2>
+        <p><strong>Job Opportunities:</strong> Software Developer, Data Scientist, AI Engineer, Cybersecurity Expert, Full-stack Developer, etc.</p>
+        <p><strong>Higher Studies:</strong>
+            <ul>
+                <li>M.Tech (Duration: 2 years)</li>
+                <li>MBA (Duration: 2 years)</li>
+                <li>Ph.D. (Duration: 3-5 years)</li>
+            </ul>
+        </p>
+        <p><strong>Packages:</strong> 
+            <ul>
+                <li>Average Salary: ₹4-10 LPA (For freshers)</li>
+                <li>Top Companies: Google, Microsoft, Amazon, IBM, TCS, Infosys</li>
+            </ul>
+        </p>
+        <p><strong>Skills Required:</strong>
+            <ul>
+                <li>Programming Languages: Java, Python, C++, JavaScript</li>
+                <li>Data Structures & Algorithms</li>
+                <li>Database Management</li>
+                <li>Machine Learning, AI, Cloud Computing</li>
+                <li>Problem-solving skills</li>
+            </ul>
+        </p>
+    </div>
+
+    <button class="option" onclick="toggleCourses('ece')">Electronics and Communication Engineering (ECE)</button>
+    <div id="ece" class="courses">
+        <h2>Electronics and Communication Engineering</h2>
+        <p><strong>Job Opportunities:</strong> Electronics Engineer, Communication Systems Engineer, Embedded Systems Developer, Signal Processing Engineer, etc.</p>
+        <p><strong>Higher Studies:</strong>
+            <ul>
+                <li>M.Tech (Duration: 2 years)</li>
+                <li>MBA (Duration: 2 years)</li>
+                <li>Ph.D. (Duration: 3-5 years)</li>
+            </ul>
+        </p>
+        <p><strong>Packages:</strong> 
+            <ul>
+                <li>Average Salary: ₹4-8 LPA (For freshers)</li>
+                <li>Top Companies: Ericsson, Qualcomm, Texas Instruments, Bosch, ISRO</li>
+            </ul>
+        </p>
+        <p><strong>Skills Required:</strong>
+            <ul>
+                <li>Digital Signal Processing (DSP)</li>
+                <li>Embedded Systems Design</li>
+                <li>Communication Protocols (5G, Wi-Fi, Bluetooth)</li>
+                <li>Circuit Design</li>
+                <li>Analytical & Problem-solving skills</li>
+            </ul>
+        </p>
+    </div>
+
+    <button class="option" onclick="toggleCourses('eee')">Electrical and Electronics Engineering (EEE)</button>
+    <div id="eee" class="courses">
+        <h2>Electrical and Electronics Engineering</h2>
+        <p><strong>Job Opportunities:</strong> Electrical Engineer, Power Systems Engineer, Renewable Energy Specialist, Automation Engineer, etc.</p>
+        <p><strong>Higher Studies:</strong>
+            <ul>
+                <li>M.Tech (Duration: 2 years)</li>
+                <li>MBA (Duration: 2 years)</li>
+                <li>Ph.D. (Duration: 3-5 years)</li>
+            </ul>
+        </p>
+        <p><strong>Packages:</strong> 
+            <ul>
+                <li>Average Salary: ₹3.5-8 LPA (For freshers)</li>
+                <li>Top Companies: ABB, Siemens, Schneider Electric, GE, NTPC</li>
+            </ul>
+        </p>
+        <p><strong>Skills Required:</strong>
+            <ul>
+                <li>Power Systems Analysis</li>
+                <li>Automation & Control Systems</li>
+                <li>Renewable Energy Solutions</li>
+                <li>Electrical Circuit Design</li>
+                <li>Mathematical Modeling & Simulation</li>
+            </ul>
+        </p>
+    </div>
+
+    <button class="option" onclick="toggleCourses('civil')">Civil Engineering</button>
+    <div id="civil" class="courses">
+        <h2>Civil Engineering</h2>
+        <p><strong>Job Opportunities:</strong> Structural Engineer, Construction Manager, Urban Planner, Highway Engineer, etc.</p>
+        <p><strong>Higher Studies:</strong>
+            <ul>
+                <li>M.Tech (Duration: 2 years)</li>
+                <li>MBA (Duration: 2 years)</li>
+                <li>Ph.D. (Duration: 3-5 years)</li>
+            </ul>
+        </p>
+        <p><strong>Packages:</strong> 
+            <ul>
+                <li>Average Salary: ₹3.5-7 LPA (For freshers)</li>
+                <li>Top Companies: L&T, DLF, Gammon India, BHEL, TATA Projects</li>
+            </ul>
+        </p>
+        <p><strong>Skills Required:</strong>
+            <ul>
+                <li>Structural Analysis & Design</li>
+                <li>Project Management</li>
+                <li>Surveying Techniques</li>
+                <li>Building Information Modeling (BIM)</li>
+                <li>Construction Materials & Methods</li>
+            </ul>
+        </p>
+    </div>
+
+    <button class="option" onclick="toggleCourses('mech')">Mechanical Engineering</button>
+    <div id="mech" class="courses">
+        <h2>Mechanical Engineering</h2>
+        <p><strong>Job Opportunities:</strong> Mechanical Engineer, Automotive Engineer, Robotics Engineer, HVAC Specialist, etc.</p>
+        <p><strong>Higher Studies:</strong>
+            <ul>
+                <li>M.Tech (Duration: 2 years)</li>
+                <li>MBA (Duration: 2 years)</li>
+                <li>Ph.D. (Duration: 3-5 years)</li>
+            </ul>
+        </p>
+        <p><strong>Packages:</strong> 
+            <ul>
+                <li>Average Salary: ₹4-9 LPA (For freshers)</li>
+                <li>Top Companies: TATA Motors, Mahindra & Mahindra, Ashok Leyland, Bosch, L&T</li>
+            </ul>
+        </p>
+        <p><strong>Skills Required:</strong>
+            <ul>
+                <li>Solid Mechanics & Thermodynamics</li>
+                <li>Fluid Mechanics</li>
+                <li>Manufacturing Processes</li>
+                <li>Automation & Robotics</li>
+                <li>Finite Element Analysis (FEA)</li>
+            </ul>
+        </p>
+    </div>
+
+    </div>
+
+
+
+
+
+    
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="https://www.youtube.com" target="_blank" class="footer-link">YouTube</a>
+            <a href="https://www.facebook.com" target="_blank" class="footer-link">Facebook</a>
+            <a href="https://www.linkedin.com/in/maradana-jayavardhan-b54ab6329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="footer-link">LinkedIn</a>
+          </div>
+          <p class="footer-copyright">&copy; 2024 Educational Guide. All rights reserved.</p>
+        </div>
+      </footer>
+    
+    <script>
+        function toggleCourses(option) {
+            // Hide all course lists
+            const courses = document.querySelectorAll('.courses');
+            courses.forEach(course => {
+                if (course.id !== option) {
+                    course.style.display = 'none';
+                }
+            });
+
+            // Toggle the visibility of the selected course list
+            const selectedCourse = document.getElementById(option);
+            selectedCourse.style.display = selectedCourse.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
+<script src="hamburger.js"></script>
+

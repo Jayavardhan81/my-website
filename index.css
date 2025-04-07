@@ -1,0 +1,507 @@
+/* Reset global margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+a {
+    text-decoration: none;
+}
+/* General Navbar Styles */
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 0 20px;
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+    position: relative; /* Ensures proper child positioning */
+    z-index: 10;
+}
+
+/* Title (h1) Styling */
+#nav-bar h1 {
+    color: #06BBCC;
+    font-size: 20px; /* Adjust font size for responsiveness */
+    font-weight: bold;
+    line-height: 60px; /* Vertically center the title */
+    margin: 0; /* Avoid extra spacing */
+}
+
+/* Hamburger Icon Styling */
+#hamburger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#hamburger-icon div {
+    background-color: #06BBCC;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Nav Links Styling */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links .nav-item {
+    font-weight: bold;
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-links .nav-item:hover,
+.nav-links .nav-item.active {
+    color: #06BBCC;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media screen and (max-width: 768px) {
+    #hamburger-icon {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Place below navbar */
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .nav-links .nav-item {
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Ensure Title (h1) is centered */
+    #nav-bar h1 {
+        font-size: 18px; /* Adjust size for mobile */
+        text-align: center;
+        flex-grow: 1;
+    }
+}
+
+/* .nav-links .login-btn {
+    background-color: #06BBCC;
+    color: white;
+    padding: 0 20px;
+    font-weight: bold;
+    height: 100%; 
+    line-height: 40px; 
+    text-align: center;
+    margin: 0; 
+    border-radius: 0; 
+}
+
+.nav-links .login-btn:hover {
+    color: black; 
+} */
+
+
+/* Hero Image */
+/* Hero Image Section */
+/* Hero Image Section */
+/* Hero Image Section */
+/* Hero Image Section */
+#img-top {
+    width: 100%;
+    height: 100vh; /* Ensure the image fills the entire viewport */
+    overflow: hidden; /* Prevent image overflow */
+    margin: 0; /* Remove any default margin */
+    padding: 7px; /* Remove any default padding */
+}
+
+#img-top img {
+    width: 100%;
+    height: 100%; /* Make the image cover the entire section */
+    object-fit: cover; /* Ensure the image fills the area without stretching */
+    display: block; /* Prevents any gap below the image */
+}
+
+/* Heading Section */
+.centered-section {
+    text-align: center; /* Centers the text */
+    position: relative;
+    z-index: 1; /* Ensures the heading is on top */
+    margin-top: -1px; /* Small space between image and heading */
+}
+
+.sub-heading {
+    font-size: 18px;
+    color: #181D38;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 15px 25px;
+    border: 2px solid #181D38; /* 2px border around the box */
+    border-radius: 5px; /* Rounded corners with 2px radius */
+    margin: 0;
+    font-weight: bold;
+    background-color: white; /* Optional: sets background color to white */
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* For tablets and smaller screens */
+    .sub-heading {
+        font-size: 16px; /* Adjust font size */
+        padding: 10px 20px; /* Adjust padding */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* For mobile screens */
+    .sub-heading {
+        font-size: 14px; /* Further reduce font size for smaller screens */
+        padding: 8px 15px; /* Adjust padding */
+        margin:12px;
+    }
+}
+
+
+.main-heading {
+    font-size: 28px;
+    color: #181D38;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Image Grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Set grid item size */
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-frame {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 300px; /* Default image height */
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%; /* Matches frame height */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Individual Sizes for the Last 4 Images */
+.image-grid a:nth-child(1) img {
+    height: 300px; /* First image height */
+}
+
+.image-grid a:nth-child(2) img {
+    height: 300px; /* Second image height */
+}
+
+.image-grid a:nth-child(3) img {
+    height: 350px; /* Third image height */
+}
+
+.image-grid a:nth-child(4) img {
+    height: 400px; /* Fourth image height */
+}
+
+.image-frame:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-frame:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #img-top {
+        height: 300px; /* Reduce hero image height */
+    }
+
+    .content-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content-section .img img {
+        max-width: 100%;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust grid columns for smaller screens */
+    }
+
+    .image-frame {
+        height: auto; /* Let height adjust for smaller screens */
+    }
+
+    .image-grid a:nth-child(1) img,
+    .image-grid a:nth-child(2) img,
+    .image-grid a:nth-child(3) img,
+    .image-grid a:nth-child(4) img {
+        height: auto; /* Responsive image height */
+    }
+}
+
+/* Carousel Section */
+.carousel-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents wrapping */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+
+/* Carousel wrapper */
+.carousel {
+    display: flex;
+    gap: 20px; /* Even gap between images */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual carousel items */
+.carousel-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 100%;
+    max-width: 250px; /* Adjusts the size */
+    transition: transform 0.3s ease;
+    margin: 0 10px; /* Spacing between items */
+}
+
+/* Image styling */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.carousel-item img:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow instead of scaling */
+}
+
+/* Navigation buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #06BBCC;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.scroll-btn.left-btn {
+    left: 10px;
+}
+
+.scroll-btn.right-btn {
+    right: 10px;
+}
+
+.scroll-btn:hover {
+    background-color: #034651;
+}
+
+/* Responsive adjustments */
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .carousel-item {
+        max-width: 80vw;
+        margin : 0 8px;
+    }
+    .carousel-container {
+        padding: 10px;  /* Reduced padding */
+    }
+}
+
+/* For tablet and smaller desktop screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .carousel-item {
+        max-width: 33.33%; /* Shows 3 items at a time */
+    }
+}
+
+/* For large desktop screens */
+@media (min-width: 1025px) {
+    .carousel-item {
+        max-width: 30%; /* Adjusts to show 3 items at once */
+    }
+}
+
+/* Add spacing to the first and last items */
+.carousel-container::before,
+.carousel-container::after {
+    content: '';
+    width: 10px;
+    display: inline-block;
+}
+
+  
+  /* Testimonials Section */
+.testimonials {
+    padding: 50px 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-bottom: 0; /* Remove bottom margin to avoid space */
+}
+
+.sub-heading {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #181D38;
+    font-weight: bold;
+}
+
+/* Slider Container */
+.testimonial-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0; /* Ensure no extra margin */
+}
+
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+.testimonial-card {
+    display: inline-block;
+    width: 30%; /* Show 3 testimonials side by side */
+    margin: 0 10px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-card h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.testimonial-card .profession {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.testimonial-card .testimonial-text {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #fff;
+    background-color: #04182d;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+
+    /* Testimonials Section - Mobile */
+    .testimonial-slider-container {
+        width: 100%;
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+
+    .testimonial-card {
+        width: 100%; /* Show one testimonial at a time */
+        margin-bottom: 20px; /* Space between testimonials */
+    }
+
+    .testimonial-slider {
+        flex-direction: column;
+    }
+}
+
+
+/* Footer Styling */
+.site-footer {
+    background-color: #071523; /* Blue background */
+    color: #fff; /* White text color */
+    text-align: center; /* Center-align content */
+    padding: 20px 10px; /* Spacing around content */
+    margin-top: 0px; /* Remove extra space from the footer */
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto; /* Center footer content */
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    color: #fff; /* White link color */
+    text-decoration: none;
+    margin: 0 15px; /* Space between links */
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+.footer-copyright {
+    font-size: 14px;
+    margin-top: 10px;
+}

@@ -1,0 +1,32 @@
+const slider = document.querySelector(".testimonial-slider");
+const cards = document.querySelectorAll(".testimonial-card");
+const cardsPerSlide = 3; // Number of cards visible at a time
+let currentIndex = 0;
+
+function updateSlider() {
+  // Calculate the offset to move the slider
+  const offset = currentIndex * (100 / cardsPerSlide);
+  slider.style.transform = `translateX(-${offset}%)`;
+
+  // Add active class to the center card
+  cards.forEach((card, index) => {
+    if (index === currentIndex + 1) {
+      card.classList.add("active");
+    } else {
+      card.classList.remove("active");
+    }
+  });
+}
+
+
+function nextSlide() {
+    currentIndex += cardsPerSlide;
+    if (currentIndex >= cards.length) {
+      currentIndex = 0; // Loop back to the start
+    }
+    updateSlider();
+  }
+  
+  // Initialize and start the slider
+  updateSlider();
+  setInterval(nextSlide, 5000); 
