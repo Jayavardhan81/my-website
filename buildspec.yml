@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies... (none for static site)"
+  build:
+    commands:
+      - echo "Build phase (can skip if no build tools used)"
+  post_build:
+    commands:
+      - echo "Build completed on `date`"
+artifacts:
+  files:
+    - '**/*'
+  base-directory: .
